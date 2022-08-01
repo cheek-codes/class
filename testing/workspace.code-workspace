@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\Downloads\\class07-materials\\template\\css"
+		},
+		{
+			"path": "..\\..\\..\\Downloads\\class07-solutions\\class07-solutions\\layout2\\css"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "testing"
+	}
+}
