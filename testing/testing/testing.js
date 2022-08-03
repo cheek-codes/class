@@ -38,10 +38,13 @@ E: If I were given [1, "2", 3], should return [1, 2, 3]
 
 //use reduce bc sum
 //change everything to an integer
-function sum_num(arr){
-    return arr.reduce((a, c) => a + Number(c), 0)
-}
+// function sum_num(arr){
+//     return arr.reduce((a, c) => a + Number(c), 0)
+// }
+
+const sum_num = arr => arr.reduce((a, c) => +a+ + c)
 
 console.log(sum_num([1, 2, 3]))
 console.log(sum_num(["1", "2", "3"]))
 console.log(sum_num([1, "2", 3]))
+
