@@ -23,20 +23,25 @@ https://cvcomplier.com
 
 
 
-/* 
-return a new array consisting of elements
-which are multiple of their own index in 
-input array (length > 1)
+/*
+Given an array of integers as strings and
+numbers, return the sum of the array
+values as if all were numbers. Return your
+answer as a number
+
+R: return a Number
+
+E: If I were given [1, 2, 3], should return [1, 2, 3]
+E: If I were given ["1", "2", "3"], should return [1, 2, 3]
+E: If I were given [1, "2", 3], should return [1, 2, 3]
 */
 
-
-function maths(arr){
-    return arr.filter((e, i) => e%i === 0)
+//use reduce bc sum
+//change everything to an integer
+function sum_num(arr){
+    return arr.reduce((a, c) => a + Number(c), 0)
 }
 
-console.log(maths(arr = [22, -6, 32, 82, 9, 25])) // [-6, 32, 25]
-console.log(maths(arr = [68, -1, 1, -7, 10, 10] )) // [-1, 10]
-<<<<<<< HEAD
-
-=======
->>>>>>> bad6b33d67c771cf8c356723d2b87f6d88af03af
+console.log(sum_num([1, 2, 3]))
+console.log(sum_num(["1", "2", "3"]))
+console.log(sum_num([1, "2", 3]))
