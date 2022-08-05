@@ -29,8 +29,8 @@ makes machines with 4 properties and 3 methods
 
 let espresso_machine = {}
 
-espresso_machine.milk_frother = true
-espresso_machine.grind_beans = "fine"
+espresso_machine.make = "brand name"
+espresso_machine.model = "fancy model"
 espresso_machine.beans_hold_lbs = 5
 espresso_machine.drip_tray = true
 
@@ -41,6 +41,5 @@ espresso_machine.on = function (on){
     console.log("machine on")
 }
 espresso_machine.off = function (off){
-    console.log("machine off")
+    console.log("machine")
 }
-
