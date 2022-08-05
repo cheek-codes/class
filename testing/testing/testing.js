@@ -22,29 +22,25 @@ https://cvcomplier.com
 
 
 
-
 /*
-Given an array of integers as strings and
-numbers, return the sum of the array
-values as if all were numbers. Return your
-answer as a number
-
-R: return a Number
-
-E: If I were given [1, 2, 3], should return [1, 2, 3]
-E: If I were given ["1", "2", "3"], should return [1, 2, 3]
-E: If I were given [1, "2", 3], should return [1, 2, 3]
+create an espresso machine constructor that
+makes machines with 4 properties and 3 methods
 */
 
-//use reduce bc sum
-//change everything to an integer
-// function sum_num(arr){
-//     return arr.reduce((a, c) => a + Number(c), 0)
-// }
+let espresso_machine = {}
 
-const sum_num = arr => arr.reduce((a, c) => +a+ + c)
+espresso_machine.milk_frother = true
+espresso_machine.grind_beans = "fine"
+espresso_machine.beans_hold_lbs = 5
+espresso_machine.drip_tray = true
 
-console.log(sum_num([1, 2, 3]))
-console.log(sum_num(["1", "2", "3"]))
-console.log(sum_num([1, "2", 3]))
+espresso_machine.time = function (time){
+    console.log(`time: ${time}`)
+}
+espresso_machine.on = function (on){
+    console.log("machine on")
+}
+espresso_machine.off = function (off){
+    console.log("machine off")
+}
 
