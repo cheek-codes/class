@@ -27,19 +27,22 @@ create an espresso machine constructor that
 makes machines with 4 properties and 3 methods
 */
 
-let espresso_machine = {}
+function Espresso_Machine(make, model, coffee_beans_lbs, drip_tray){
+    this.make = make
+    this.model = model
+    this.coffee_beans_lbs = coffee_beans_lbs
+    this.drip_tray = drip_tray
 
-espresso_machine.make = "brand name"
-espresso_machine.model = "fancy model"
-espresso_machine.beans_hold_lbs = 5
-espresso_machine.drip_tray = true
+    this.on = function (){
+        console.log("machine on")
+    }
+    this.off = function(){
+        console.log("machine off")
+    }
+    this.grind = function(){
+        console.log("grid coffee")
+    }
+}
 
-espresso_machine.time = function (time){
-    console.log(`time: ${time}`)
-}
-espresso_machine.on = function (on){
-    console.log("machine on")
-}
-espresso_machine.off = function (off){
-    console.log("machine")
-}
+let fancy_machine = new Espresso_Machine("fancy", "top teir", 10 , true)
+let cheap_machine = new Espresso_Machine("cheap", "cheapest", 2, true)
