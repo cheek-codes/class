@@ -44,7 +44,7 @@ class Cat extends Animals{
 
 
 let simba = new Dog("simba", "pitbull")
-let salem = new Dog("salem", "black cat")
+let salem = new Cat("salem", "black cat")
 
 let farm = [simba, salem]
 
