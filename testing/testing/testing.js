@@ -1,49 +1,53 @@
-// grassroots volunteer
-
-//firsttimersonly.com
-
-// outreach for volunteer work
-
-//gitforwindows.org
-
-
-// aka.ms/learnwithleon
-
 /*
-template bob boberson
-https://cvcomplier.com
+create a class and extend it
 */
 
-//code for america
-
-
-// As Fatty the Birb tries to fly South for the winter, he encounters some obstacles. Being so rotund, he has a hard time flying up, but will fall quickly due to gravity and his large mass as soon as he stops flapping his small wings. A new "Flappy Bird" type game.
-
-
-
-
-/*
-create an espresso machine constructor that
-makes machines with 4 properties and 3 methods
-*/
-
-class Espresso_Machine {
-    constructor(make, model, coffee_beans_lbs, drip_tray){
-        this.make = make
-        this.model = model
-        this.coffee_beans_lbs = coffee_beans_lbs
-        this.drip_tray = drip_tray
+class Animal{
+    constructor(name){
+        this.name = name
     }
-    on(){
-        console.log("Machine on")
+    get name(){
+        return this.name
     }
-    off(){
-        console.log("Machine off")
-    }
-    grind(){
-        console.log("grind coffee")
+    speak(){
+        console.log(`${this.name} makes a sound`)
     }
 }
 
-let fancy_machine = new Espresso_Machine("fancy", "top teir", 12, true)
-let budget_machine = new Espresso_Machine("cheap", "cheapest one", 0, true)
+class Dog extends Animal{
+    constructor(name, breed){
+        super(name)
+        this.breed = breed
+    }
+    get breed(){
+        return this.breed
+    }
+    speak(){
+        super.speak()
+        console.log(`${this.name} barks`)
+    }
+}
+
+class Cat extends Animals{
+    constructor(name, breed){
+        super(name)
+        this._breed = breed
+    }
+    get breed(){
+        return this._breed
+    }
+    speak(){
+        super.speak()
+        console.log(`${this.name} meows`)
+    }
+}
+
+
+let simba = new Dog("simba", "pitbull")
+let salem = new Dog("salem", "black cat")
+
+let farm = [simba, salem]
+
+for (a of farm){
+    a.speak()
+}
