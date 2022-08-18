@@ -42,11 +42,23 @@ class Cat extends Animals{
     }
 }
 
+class Bird extends Animal {
+    constructor (name, color){
+        super(name)
+        this.color = color
+    }
+    speak(){
+        super.speak()
+        console.log(`${this.name} chirps`)
+    }
+}
+
 
 let simba = new Dog("simba", "pitbull")
 let salem = new Cat("salem", "black cat")
+let sapphire = new Bird("sapphire", "blue")
 
-let farm = [simba, salem]
+let farm = [simba, salem, sapphire]
 
 for (a of farm){
     a.speak()
