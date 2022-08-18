@@ -28,7 +28,7 @@ class Dog extends Animal{
     }
 }
 
-class Cat extends Animals{
+class Cat extends Animal{
     constructor(name, breed){
         super(name)
         this._breed = breed
