@@ -4,10 +4,10 @@ create a class and extend it
 
 class Animal{
     constructor(name){
-        this.name = name
+        this._name = name
     }
     get name(){
-        return this.name
+        return this._name
     }
     speak(){
         console.log(`${this.name} makes a sound`)
@@ -17,10 +17,10 @@ class Animal{
 class Dog extends Animal{
     constructor(name, breed){
         super(name)
-        this.breed = breed
+        this._breed = breed
     }
     get breed(){
-        return this.breed
+        return this._breed
     }
     speak(){
         super.speak()
@@ -63,3 +63,5 @@ let farm = [simba, salem, sapphire]
 for (a of farm){
     a.speak()
 }
+
+console.log(farm)
