@@ -41,7 +41,7 @@ class Back extends Front{
     }
 }
 
-let sandy = new Back("Sandy", "front-end", "node")
+let sandy = new Back("Sandy", "back-end", "node")
 
 let agency = [sandy]
 
