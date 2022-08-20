@@ -1,67 +1,114 @@
-/*
-create a class and extend it
-*/
+//come up with a parent class
+//extend that arent class into 2 children
+//use encapsulation, abstraction, inheritance and polymorphism
 
-class Animal{
-    constructor(name){
+class Contractor{
+    constructor(name, role){
         this._name = name
+        this._role = role
     }
     get name(){
         return this._name
     }
-    speak(){
-        console.log(`${this.name} makes a sound`)
+    get role(){
+        return this._role
+    }
+    introduce(){
+        console.log(`Hi, my name is ${this._name} and I'm a ${this._role} developer`)
     }
 }
 
-class Dog extends Animal{
-    constructor(name, breed){
-        super(name)
-        this._breed = breed
+class Front extends Contractor{
+    constructor(name, role, tech){
+        super(name, role)
+        this._tech = tech
     }
-    get breed(){
-        return this._breed
+    get tech(){
+        return this._tech
     }
-    speak(){
-        super.speak()
-        console.log(`${this.name} barks`)
-    }
-}
-
-class Cat extends Animal{
-    constructor(name, breed){
-        super(name)
-        this._breed = breed
-    }
-    get breed(){
-        return this._breed
-    }
-    speak(){
-        super.speak()
-        console.log(`${this.name} meows`)
+    introduce(){
+        super.introduce()
+        console.log(`I work with ${this._tech}`)
     }
 }
 
-class Bird extends Animal {
-    constructor (name, color){
-        super(name)
-        this.color = color
+class Back extends Front{
+    constructor(name, role, tech){
+        super(name, role, tech)
     }
-    speak(){
-        super.speak()
-        console.log(`${this.name} chirps`)
+    introduce(){
+        super.introduce()
     }
 }
 
+let sandy = new Back("Sandy", "front-end", "node")
 
-let simba = new Dog("simba", "pitbull")
-let salem = new Cat("salem", "black cat")
-let sapphire = new Bird("sapphire", "blue")
+let agency = [sandy]
 
-let farm = [simba, salem, sapphire]
-
-for (a of farm){
-    a.speak()
+for (person of agency){
+    person.introduce()
 }
 
-console.log(farm)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Contractor{
+//     constructor(name, role){
+//         this._name = name
+//         this._role = role
+//     }
+//     get name(){
+//         return this._name
+//     }
+//     get role(){
+//         return this._role
+//     }
+//     sayHello(){
+//         console.log(`Hello, I am on the ${this._role} team at #100Devs!`)
+//     }
+// }
+
+// class Front extends Contractor{
+//     constructor(name, role, tech){
+//         super(name, role)
+//         this._tech = tech
+//     }
+//     get tech(){
+//         return this._tech
+//     }
+//     sayHello(){
+//         console.log(`Hello, I am on the ${this._role} team at #100Devs! And I use ${this._tech}`)
+//     }
+// }
+
+// class Back extends Contractor{
+//     constructor(name, role, tech){
+//         super(name, role)
+//         this._tech =tech
+//     }
+//     sayHello(){
+//         console.log(`Hello, I am on the ${this._role} team at #100Devs! And I use ${this._tech}`)
+//     }
+// }
+
+// let bob = new Contractor("Bob", "front-end")
+// let simba = new Front ("simba", "front-end", "react")
+// let machi = new Back ("machi", "back-end", "node")
+
+// let agency = [bob, simba, machi]
+
+// for(person of agency){
+//     person.sayHello()
+// }
