@@ -43,10 +43,12 @@ class Back extends Front{
 
 let sandy = new Back("Sandy", "back-end", "node")
 
-let agency = [sandy]
+let liam = new Front("liam", "front-end", "react")
+
+let agency = [sandy, liam]
 
 for (person of agency){
-    person.introduce()
+    console.log(person.name)
 }
 
 
