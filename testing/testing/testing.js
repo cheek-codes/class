@@ -48,7 +48,7 @@ let liam = new Front("liam", "front-end", "react")
 let agency = [sandy, liam]
 
 for (person of agency){
-    console.log(person.name)
+    person.introduce()
 }
 
 
