@@ -22,29 +22,46 @@
 //100 hours project description. have simple using wireframe.cc, figma, or balsamiq or just draw it out
 
 
-document.querySelector('button').addEventListener('click', getFetch)
+// document.querySelector("button").addEventListener("click", getFetch)
 
-function getFetch(){
-  const choice = document.querySelector('input').value
-  console.log(choice)
-  const url = `https://openlibrary.org/isbn/${choice}.json`
+// function getFetch(){
+//     const choice = document.querySelector("input").value
+//     const url = `https://www.dnd5eapi.co/api/spells/${choice}`
 
-  fetch(url)
-      .then(res => res.json()) // parse response as JSON
-      .then(data => {
-        console.log(data.title)
-        if(!localStorage.getItem('books')){
-            localStorage.setItem('books', data.title)
-        }else{
-           let books = localStorage.getItem('books') + " ; " + data.title
-           localStorage.setItem('books', books)
-        }
-          //put title into localStorage
-          // let books = localStorage.getItem('books') + " ; " + data.title
-          // localStorage.setItem('books', books)
-        document.querySelector('h2').innerText = localStorage.getItem('books')
-      })
-      .catch(err => {
-          console.log(`error ${err}`)
-      });
+//     fetch(url)
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data)
+//             document.querySelector("h2").innerHTML = data.name
+//             document.querySelector("h4").innerHTML = data.subclasses[0].name
+//             console.log(data.name)
+//             console.log(data.subclasses)
+//         })
+//         .catch(err => {
+//             console.log(`error ${err}`)
+//         })
+// }
+
+
+
+function EspressoMachine(make, model, color, cups){
+    this.make = make
+    this.model = model
+    this.color = color
+    this.cups = cups
+
+    this.brew = function(){
+        console.log("brew")
+    }
+    this.turn_on = function(){
+        console.log("on")
+    }
+    this.clean = function(){
+        console.log("clean me")
+    }
 }
+
+let keurig = new EspressoMachine("keurig", "p90x", "red", 12)
+
+console.log("hi")
+console.log(keurig.brew)
