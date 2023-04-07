@@ -44,24 +44,9 @@
 
 
 
-function EspressoMachine(make, model, color, cups){
-    this.make = make
-    this.model = model
-    this.color = color
-    this.cups = cups
 
-    this.brew = function(){
-        console.log("brew")
-    }
-    this.turn_on = function(){
-        console.log("on")
-    }
-    this.clean = function(){
-        console.log("clean me")
+class Coffee{
+    constructor(make, model, color){
+        this
     }
 }
-
-let keurig = new EspressoMachine("keurig", "p90x", "red", 12)
-
-console.log("hi")
-console.log(keurig.brew)
